@@ -1,0 +1,32 @@
+﻿using Main.Application.CustomTypes;
+using Main.Application.Requests.RestaurantStaffRequests;
+
+namespace Main.Application.Requests.RestaurantRequests
+{
+    public class GetRestaurantDetailRequest : Request
+    {
+        public required Guid Id { get; set; }
+    }
+    public class GetRestaurantDetailResponse
+    {
+        public required Guid Id { get; set; }
+        public required string Number { get; set; }
+        public required string PhoneNo { get; set; }
+        public required string Name { get; set; }
+        public required string Description { get; set; }
+        public required string Country { get; set; }
+        public required string Currency { get; set; }
+        public required Coordinates Coordinates { get; set; }
+        public required string StreetAddress { get; set; }
+        public double RestaurantRadius { get; set; }
+        public required bool HomeDelivery { get; set; }
+        public required bool OnPremise { get; set; }
+        public required bool PayWithApp { get; set; }
+        public required string DeliveryCondiction { get; set; }
+        public string? OpenTime { get; set; }
+        public string? CloseTime { get; set; }
+        public BankAccountDetails? BankAccountDetails { get; set; }
+
+        
+    }
+}
